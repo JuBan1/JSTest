@@ -15,8 +15,8 @@ public:
 	NqqExtension(QString dirPath, MainWindow* ptr);
 
 signals:
-	void test();
-	void buttonClick();
+	void test();		//unused
+	void buttonClick();	//we want to emit this signal when the "kill whitespace" button is clicked
 
 public slots:
 	Q_INVOKABLE QString getTextEditContents() const;
