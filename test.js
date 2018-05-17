@@ -16,7 +16,7 @@ Apple.prototype.getInfo = function() {
 
 function whitespaceremover() {
     var val = NqqExt.getTextEditContents();
-	val newVal =  val.replace(' ', '_')
+	var newVal =  val.replace(/ /g, ''); 
 	NqqExt.setTextEditContents(newVal);
 }
 
