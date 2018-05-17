@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	NqqExtension* ext = new NqqExtension(QFileInfo(qApp->arguments()[0]).canonicalPath(), this);
 
-	connect(this, &MainWindow::onAction, ext, &NqqExtension::buttonClick);
+	connect(ui->pushButton, &QPushButton::clicked, ext, &NqqExtension::buttonClick);
 
 	/*eng = new QJSEngine();
 	eng->installExtensions(QJSEngine::ConsoleExtension);
@@ -79,9 +79,4 @@ QString MainWindow::getValue()
 void MainWindow::setValue(QString txt)
 {
 	ui->textEdit->setPlainText(txt);
-}
-
-void MainWindow::on_pushButton_clicked()
-{
-	emit onAction("button clicked");
 }
