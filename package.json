@@ -1,0 +1,8 @@
+{
+	"entryfile": "test.js",
+	"entrypoint": "func",
+
+	"signals": {
+		"buttonClick": "whitespaceremover"
+	}
+}
